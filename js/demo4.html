@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function fun()
+		{
+            s = "";
+            console.log("click"+document.frm.chk.length);
+            for(i=0;i<document.frm.chk.length;i++)
+            {
+            	
+                if(document.frm.chk[i].checked)
+                  {
+                  	s = s+ document.frm.chk[i].value;
+                  }
+            }
+
+           s1="";
+           for(i=0;i<document.getElementById("lst[]").length;i++)
+            {
+            	
+                if(document.getElementById("lst[]")[i].selected)
+                  {
+                  	s1 = s1+ document.getElementById("lst[]")[i].value;
+                  }
+            }
+
+            document.getElementById("res").innerHTML = "name is " + document.frm.txtname.value+s + "Course is "+s1;
+
+		}
+
+	</script>
+</head>
+<body>
+<form name="frm" action="">
+<input type="text" name="txtname" /> <br>	
+<input type="checkbox" name="chk" value="C" />C <br>
+<input type="checkbox" name="chk" value="C++" />C++ <br>
+<input type="checkbox" name="chk" value="DS" />DS <br>
+
+<br><br>
+<select id="lst[]" multiple="true" style="width:300px;">
+	<option value="C">C</option>
+    <option value="C++">C++</option>
+    <option value="DS">DS</option>
+    <option value="JAVA">Java</option>
+    <option value=".NET">.NET</option>
+</select>
+<br><br>
+<input type="button" id="btnclick" onclick="fun()" value="Click" />
+<br>
+<div id="res"></div>
+</form>
+</body>
+</html>

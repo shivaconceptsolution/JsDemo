@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <script type="text/javascript">
+  function calc(v)
+  {
+   
+   document.getElementById("txtresult").innerHTML=document.getElementById("txtresult").innerHTML+v;
+  }
+  function sol()
+  {
+   document.getElementById("txtresult").innerHTML=eval(document.getElementById("txtresult").innerHTML);
+   }
+   function cleardata()
+   {
+    document.getElementById("txtresult").innerHTML=" ";
+   }
+
+ </script>
+</head>
+<body>
+
+<div  id="txtresult" >
+</div>
+<br>
+<br>
+<button  onclick="calc('0')">0</button>
+<button  onclick="calc('1')">1</button>
+<button  onclick="calc('2')">2</button>
+<button  onclick="calc('3')">3</button>
+<button  onclick="calc('4')">4</button>
+
+<br>
+<br>
+<button  onclick="calc('5')">5</button>
+<button  onclick="calc('6')">6</button>
+<button  onclick="calc('7')">7</button>
+<button  onclick="calc('8')">8</button>
+<button  on
+<br>
+
+<button  onclick="calc('+')">+</button>
+<button  onclick="calc('-')">-</button>
+
+<button  onclick="calc('*')">*</button>
+
+
+<button  onclick="calc('/')">/</button>
+<button  onclick="calc('%')">%</button>
+<br>
+<br>
+<button  onclick="calc('.')">.</button>
+<button onclick="cleardata()">C</button>
+<button  onclick="sol('=')">=</button>
+</body>
+</html>

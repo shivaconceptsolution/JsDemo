@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	
+var a=2000;
+var b;	
+function display(a,b)
+{
+	this.a=a;
+	this.b=b;
+	console.log(this.a+this.b);
+
+}
+
+var obj = new display(10,20)
+console.log(obj.a)
+var obj1 = new display(100,200)
+console.log(obj1.b)
+</script>

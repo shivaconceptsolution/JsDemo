@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function validate()
+		{
+			mobile = document.getElementById("txtmobile").value;
+			msg='';
+			if(mobile.length==0)
+			{
+				msg = 'mobileno should be required';
+				document.getElementById("sp").innerHTML = msg;
+                //alert(msg);
+				return false;
+			}
+			else if(isNaN(mobile))
+			{
+				msg = 'mobileno should be numeric';
+				document.getElementById("sp").innerHTML = msg;
+				//alert(msg);
+				return false;
+			}
+			else if(mobile.length!=10)
+			{
+				msg = 'mobile no should be 10 digit';
+				document.getElementById("sp").innerHTML = msg;
+				//alert(msg);
+				return false;
+			}
+			
+		}
+
+	</script>
+
+</head>
+<body>
+<form action="demo1.html" method="post">
+   
+   <input type="text" id="txtmobile" placeholder="Enter mobileno" /> <span id="sp"></span>
+   <br><br>
+   <input type="submit" value="submit" onclick="return validate()" />
+
+</form>
+</body>
+</html>
